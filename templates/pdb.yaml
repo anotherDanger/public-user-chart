@@ -3,6 +3,8 @@ kind: PodDisruptionBudget
 metadata:
   name: {{ .Release.Name }}-pdb
   namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "chart.labels" . | indent 4}}
 spec:
   minAvailable: {{ .Values.pdb.minAvailable | default 1 }}
   selector:
