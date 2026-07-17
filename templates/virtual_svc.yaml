@@ -1,0 +1,27 @@
+apiVersion: networking.istio.io/v1
+kind: VirtualService
+metadata:
+  name: {{.Release.Name}}-virtual-svc
+  namespace: {{.Release.Namespace}}
+  labels:
+    {{- include "chart.labels" . | indent 4}}
+spec:
+  hosts:
+  - '*'
+  gateways:
+    - istio-system/{{.Release.Name}}-gateway
+  http:
+    - match:
+        - uri:
+            prefix: /v1/auth/user/login
+        - uri:
+            prefix: /v1/auth/user/register
+        - uri:
+            prefix: /user_v1.UserService
+      route:
+        - destination:
+            host: {{include "user-chart.vs.host" .}}
+            subset: v1
+          weight: 100
+
+
