@@ -27,13 +27,14 @@ spec:
       serviceAccountName: user-service-sa
       affinity:
         nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-            - matchExpressions:
-              - key: {{.Values.app.affinity.key}}
-                operator: In
-                values:
-                - {{.Values.app.affinity.value}}
+          preferredDuringSchedulingIgnoredDuringExecution:
+            - weight: 100
+              preference:
+                matchExpressions:
+                  - key: {{ .Values.app.affinity.key }}
+                    operator: In
+                    values:
+                      - {{ .Values.app.affinity.value }}
       imagePullSecrets:
         - name: ghcr-secret
       containers:
