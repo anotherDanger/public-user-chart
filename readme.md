@@ -18,7 +18,7 @@ To deploy these dependencies, you can leverage the official third-party Helm cha
 > ⚠️ **Dev Note:** Haven't completed it yet, so tired.
 
 * 🗺️ **Gateway Chart** (Coming soon)
-* 🔑 **Auth Chart** (Coming soon)
-* 💳 **Wallet Chart** (Coming soon)
+* 🔑 [**Auth Chart**] (https://github.com/anotherdanger/public-auth-chart.git)
+* 💳 [**Wallet Chart**] (https://github.com/anotherdanger/public-wallet-chart.git)
 * 🔔 **Notification Chart** (Coming soon)
 * 📖 **Ledger Chart** (Coming soon)
