@@ -3,6 +3,8 @@ kind: DestinationRule
 metadata:
   name: {{.Release.Name}}-dest-rule
   namespace: {{.Release.Namespace}}
+  labels:
+    {{- include "chart.labels" . | indent 4}}
 spec:
   host: {{.Release.Name}}-svc.{{.Release.Namespace}}.svc.cluster.local
   subsets:

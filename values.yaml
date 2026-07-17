@@ -16,6 +16,11 @@ service:
   grpcTargetPort: 50052
 
 resources:
+  hpa:
+    minReplicas: 1
+    maxReplicas: 3
+    cpu:
+      utilization: 50
   requests:
     cpu: "50m"
     memory: "64Mi"
@@ -23,6 +28,8 @@ resources:
     cpu: "100m"
     memory: "128Mi"
     
+pdb:
+  minAvailable: 1
 
 env:
   APP_SERVER_PORT: "8081"

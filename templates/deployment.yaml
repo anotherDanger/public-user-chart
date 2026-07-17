@@ -5,6 +5,7 @@ metadata:
   namespace: {{.Release.Namespace}}
   labels:
     name:  {{.Release.Name}}
+    {{- include "chart.labels" . | indent 4}}
 spec:
   selector:
     matchLabels:
