@@ -15,10 +15,8 @@ Ensure that `auth-service`, **PostgreSQL**, **Kafka**, and **Redis** are already
 To deploy these dependencies, you can leverage the official third-party Helm charts available via **Artifact Hub**.
 
 ## ☸️ Connected Charts
-> ⚠️ **Dev Note:** Haven't completed it yet, so tired.
-
-* 🗺️ **Gateway Chart** (Coming soon)
+* 🗺️ **Gateway Chart** (https://github.com/anotherdanger/public-gateway-chart.git)
 * 🔑 [**Auth Chart**] (https://github.com/anotherdanger/public-auth-chart.git)
 * 💳 [**Wallet Chart**] (https://github.com/anotherdanger/public-wallet-chart.git)
-* 🔔 **Notification Chart** (Coming soon)
-* 📖 **Ledger Chart** (Coming soon)
+* 🔔 **Notification Chart** (https://github.com/anotherdanger/public-notification-chart.git)
+* 📖 **Ledger Chart** (https://github.com/anotherdanger/public-ledger-chart.git)
