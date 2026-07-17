@@ -31,14 +31,14 @@ env:
   APP_AUTH_GRPC_PORT: "50051"
   APP_INTERNAL_GRPC_HOST: "0.0.0.0"
   APP_INTERNAL_GRPC_PORT: "50052"
-  APP_POSTGRES_HOST: "user-postgres-db-postgresql-0.user-postgres-db-postgresql-hl.data.svc.cluster.local"
+  APP_POSTGRES_HOST:
   APP_POSTGRES_PORT: "5432"
-  APP_POSTGRES_USER: ""
+  APP_POSTGRES_USER:
   APP_POSTGRES_DB: "db_user_test"
   APP_POSTGRES_SCHEMA: "test"
-  APP_KAFKA_HOST: "kafka-service-svc.event.svc.cluster.local"
+  APP_KAFKA_HOST:
   APP_KAFKA_PORT: "9092"
-  APP_OTEL_HOST: otel-collector-opentelemetry-collector.observability.svc.cluster.local
+  APP_OTEL_HOST:
   APP_OTEL_PORT: 4317
-  APP_REDIS_HOST: redis-auth-master-0.redis-auth-headless.data.svc.cluster.local
+  APP_REDIS_HOST:
   APP_REDIS_PORT: 6379
