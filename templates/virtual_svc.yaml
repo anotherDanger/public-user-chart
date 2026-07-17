@@ -18,6 +18,12 @@ spec:
             prefix: /v1/auth/user/register
         - uri:
             prefix: /user_v1.UserService
+        - uri:
+            prefix: /v1/auth/user/verify
+        - uri:
+            prefix: /v1/auth/user/resend-email
+        - uri:
+            prefix: /v1/auth/user/logout
       route:
         - destination:
             host: {{include "user-chart.vs.host" .}}
