@@ -5,7 +5,7 @@ app.kubernetes.io/version: {{ .Chart.AppVersion }}
 {{- end -}}
 
 {{- define "user-chart.appName" -}}
-{{- .Release.Name}}-app
+{{- .Release.Name}}
 {{- end -}}
 
 {{- define "user-chart.vs.host" -}}
