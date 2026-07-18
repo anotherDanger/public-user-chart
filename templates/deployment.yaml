@@ -35,8 +35,6 @@ spec:
                     operator: In
                     values:
                       - {{ .Values.app.affinity.value }}
-      imagePullSecrets:
-        - name: ghcr-secret
       containers:
       - image:  "{{.Values.app.image.repository}}:{{.Values.app.image.tag}}"
         name: {{.Release.Name}}-app

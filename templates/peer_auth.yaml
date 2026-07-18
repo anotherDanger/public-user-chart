@@ -6,5 +6,8 @@ metadata:
   labels:
     {{- include "chart.labels" . | indent 4}}
 spec:
+  selector:
+    matchLabels:
+      app: {{.Release.Name}}-app
   mtls:
     mode: STRICT

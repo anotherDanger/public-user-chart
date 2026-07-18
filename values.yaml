@@ -31,6 +31,9 @@ resources:
 pdb:
   minAvailable: 1
 
+gateway:
+  name: gateway
+
 env:
   APP_SERVER_PORT: "8081"
   APP_INTERNAL_PORT: "9090"

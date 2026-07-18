@@ -9,7 +9,7 @@ spec:
   hosts:
   - '*'
   gateways:
-    - istio-system/{{.Release.Name}}-gateway
+    - istio-system/{{.Values.gateway.name}}
   http:
     - match:
         - uri:
